@@ -3,42 +3,30 @@ set surround
 set highlightedyank
 
 " Options
-set	clipboard+=unnamed
-set	scrolloff=4
-set	sidescrolloff=2
 set visualbell
-set noerrorbells
 set ignorecase
 set smartcase
 set number
 set relativenumber
+set wrap
 
 " Keymaps
 let mapleader = " "
 
-nnoremap c "_c
-nnoremap C "_C
-nnoremap d "_d
-nnoremap D "_D
-nnoremap dd "_dd
-xnoremap d "_d
-xnoremap D "_D
-xnoremap p "_dP
+nnoremap y "+y
+vnoremap y "+y
+nnoremap p "+p
+vnoremap p "+p
 
-nnoremap <tab> :action NextTab<CR>
-nnoremap <S-tab> :action PreviousTab<CR>
-nnoremap <C-S-t> :action ReopenClosedTab<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <s-k> :action ShowHoverInfo<cr>
+nnoremap <s-j> :action ShowErrorDescription<cr>
 
-nnoremap <S-k> :action ShowHoverInfo<CR>
-nnoremap <S-j> :action ShowErrorDescription<CR>
-nnoremap gd :action GotoDeclaration<CR>
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gr :action ShowUsages<CR>
+nnoremap gd :action GotoDeclaration<cr>
+nnoremap gi :action GotoImplementation<cr>
+nnoremap gr :action ShowUsages<cr>
 
-nnoremap <C-p> :action GotoFile<CR>
+nnoremap <a-n> :action GotoClass<cr>
+nnoremap <a-s-n> :action GotoFile<cr>
 
-nnoremap <A-j> :action MoveLineDown<CR>
-nnoremap <A-k> :action MoveLineUp<CR>
-xnoremap <A-j> :action MoveLineDown<CR>
-xnoremap <A-k> :action MoveLineUp<CR>
+nnoremap <c-p> :action ParameterInfo<cr>
+nnoremap <c-n> <nop>
